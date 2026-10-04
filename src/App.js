@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {BrowserRouter, Routes, Route, Link, useLocation, useNavigate} from 'react-router-dom';
-import logo from './assets/lg1.png';
+import logo from './assets/logo1.jpg';
 import hero from './assets/transport-hero.webp';
 import './App.css';
 const copy = {
