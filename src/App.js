@@ -1,3 +1,4 @@
+import './App.css';
 import {DemoLanguageProvider} from './i18n/DemoLanguage';
 import { useDemoLanguage, DemoLanguageSwitcher } from "./i18n/DemoLanguage";
 import React, { useState, useEffect } from 'react';
