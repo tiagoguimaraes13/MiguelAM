@@ -1,28 +1,185 @@
-import React, {useState, useEffect} from 'react';
-import {BrowserRouter, Routes, Route, Link, useLocation, useNavigate} from 'react-router-dom';
+import {DemoLanguageProvider} from './i18n/DemoLanguage';
+import { useDemoLanguage, DemoLanguageSwitcher } from "./i18n/DemoLanguage";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from './assets/logo1.jpg';
 import hero from './assets/transport-hero.webp';
-import './App.css';
 const copy = {
- pt: {demo:'Conceito independente por TOIMU · Não é o site oficial. Nenhum pedido é enviado.',nav:['Início','Soluções','Como funciona','Contacto'],quote:'Planear um transporte',eyebrow:'MIGUEL AM TRANSPORTES',title:<>A sua urgência.<br /><em>O nosso caminho.</em></>,intro:'Um conceito digital para ligar empresas, mercadorias e destinos com uma experiência simples de transporte.',origin:'Origem',destination:'Destino',placeholder:['Cidade de recolha','Cidade de entrega'],solutions:'Cada envio começa com uma solução.',services:[['Transporte dedicado','Uma proposta de serviço para mercadorias que precisam de um percurso direto.'],['Distribuição regional','Uma experiência de pedido pensada para recolhas e entregas na Península Ibérica.'],['Envios empresariais','Um ponto de contacto para necessidades recorrentes e transporte à medida.']],process:'Da recolha à entrega. Sem complicar.',steps:[['Conte-nos o percurso','Indique origem, destino e o que pretende transportar.'],['Defina os detalhes','Partilhe datas, dimensões e necessidades de carga.'],['Receba uma proposta','Num site operacional, a equipa confirma disponibilidade e condições.']],contact:'Vamos pôr a sua ideia em movimento.',contactText:'Explore o pedido de transporte. Nesta demonstração, os dados ficam apenas na página e não são enviados à empresa.',route:'O percurso',cargo:'A mercadoria',details:'Os seus dados',next:'Continuar',back:'Voltar',date:'Data pretendida',kind:'Tipo de mercadoria',weight:'Peso aproximado (kg)',description:'Descrição / dimensões',name:'Nome',email:'Email',review:'Pré-visualizar pedido',success:'Pedido preparado — demonstração',successText:'Nenhum pedido foi enviado e nenhum transporte foi reservado.',download:'Descarregar resumo',new:'Preparar outro pedido',faq:'Antes de enviar',faqs:[['Este formulário reserva um transporte?','Não. É uma demonstração do pedido de orçamento. Um serviço real precisará de confirmação da equipa.'],['Porque não vejo um preço automático?','O valor depende do percurso, volume, peso e disponibilidade. Este conceito não inventa tarifas.'],['Posso incluir necessidades especiais?','Sim. Use a descrição para indicar dimensões, acessos ou requisitos de manuseamento.']],footer:'Conceito de website · Serviço, cobertura e condições a confirmar pela empresa.',image:'Imagem ilustrativa; não representa a frota da empresa.',required:'Complete os campos obrigatórios antes de continuar.'},
- en: {demo:'Independent concept by TOIMU · Not the official website. No requests are sent.',nav:['Home','Solutions','How it works','Contact'],quote:'Plan a shipment',eyebrow:'MIGUEL AM TRANSPORTES',title:<>Your urgency.<br /><em>Our direction.</em></>,intro:'A digital concept connecting businesses, goods and destinations through a straightforward transport experience.',origin:'Origin',destination:'Destination',placeholder:['Collection city','Delivery city'],solutions:'Every shipment starts with a solution.',services:[['Dedicated transport','A proposed service for goods that need a direct journey.'],['Regional distribution','An enquiry experience designed for collections and deliveries across the Iberian Peninsula.'],['Business shipments','A point of contact for recurring needs and tailored transport.']],process:'From collection to delivery. Made simple.',steps:[['Tell us the route','Share the origin, destination and what needs moving.'],['Define the details','Add dates, dimensions and cargo requirements.'],['Receive a proposal','On an operational website, the team confirms availability and terms.']],contact:'Let’s get your idea moving.',contactText:'Explore the shipment enquiry. In this demonstration, details stay on the page and are not sent to the business.',route:'The route',cargo:'The cargo',details:'Your details',next:'Continue',back:'Back',date:'Preferred date',kind:'Cargo type',weight:'Approximate weight (kg)',description:'Description / dimensions',name:'Name',email:'Email',review:'Preview request',success:'Request prepared — demonstration',successText:'No request was sent and no shipment was booked.',download:'Download summary',new:'Prepare another request',faq:'Before you send',faqs:[['Does this form book a shipment?','No. This is a quotation enquiry demonstration. A real service requires confirmation from the team.'],['Why is there no automatic price?','Pricing depends on route, volume, weight and availability. This concept does not invent rates.'],['Can I include special requirements?','Yes. Use the description to add dimensions, access or handling requirements.']],footer:'Website concept · Services, coverage and terms require business confirmation.',image:'Illustrative image; does not depict the business’s fleet.',required:'Complete the required fields before continuing.'}
+  pt: {
+    demo: 'Conceito independente por TOIMU · Não é o site oficial. Nenhum pedido é enviado.',
+    nav: ['Início', 'Soluções', 'Como funciona', 'Contacto'],
+    quote: 'Planear um transporte',
+    eyebrow: 'MIGUEL AM TRANSPORTES',
+    title: <>A sua urgência.<br /><em>O nosso caminho.</em></>,
+    intro: 'Um conceito digital para ligar empresas, mercadorias e destinos com uma experiência simples de transporte.',
+    origin: 'Origem',
+    destination: 'Destino',
+    placeholder: ['Cidade de recolha', 'Cidade de entrega'],
+    solutions: 'Cada envio começa com uma solução.',
+    services: [['Transporte dedicado', 'Uma proposta de serviço para mercadorias que precisam de um percurso direto.'], ['Distribuição regional', 'Uma experiência de pedido pensada para recolhas e entregas na Península Ibérica.'], ['Envios empresariais', 'Um ponto de contacto para necessidades recorrentes e transporte à medida.']],
+    process: 'Da recolha à entrega. Sem complicar.',
+    steps: [['Conte-nos o percurso', 'Indique origem, destino e o que pretende transportar.'], ['Defina os detalhes', 'Partilhe datas, dimensões e necessidades de carga.'], ['Receba uma proposta', 'Num site operacional, a equipa confirma disponibilidade e condições.']],
+    contact: 'Vamos pôr a sua ideia em movimento.',
+    contactText: 'Explore o pedido de transporte. Nesta demonstração, os dados ficam apenas na página e não são enviados à empresa.',
+    route: 'O percurso',
+    cargo: 'A mercadoria',
+    details: 'Os seus dados',
+    next: 'Continuar',
+    back: 'Voltar',
+    date: 'Data pretendida',
+    kind: 'Tipo de mercadoria',
+    weight: 'Peso aproximado (kg)',
+    description: 'Descrição / dimensões',
+    name: 'Nome',
+    email: 'Email',
+    review: 'Pré-visualizar pedido',
+    success: 'Pedido preparado — demonstração',
+    successText: 'Nenhum pedido foi enviado e nenhum transporte foi reservado.',
+    download: 'Descarregar resumo',
+    new: 'Preparar outro pedido',
+    faq: 'Antes de enviar',
+    faqs: [['Este formulário reserva um transporte?', 'Não. É uma demonstração do pedido de orçamento. Um serviço real precisará de confirmação da equipa.'], ['Porque não vejo um preço automático?', 'O valor depende do percurso, volume, peso e disponibilidade. Este conceito não inventa tarifas.'], ['Posso incluir necessidades especiais?', 'Sim. Use a descrição para indicar dimensões, acessos ou requisitos de manuseamento.']],
+    footer: 'Conceito de website · Serviço, cobertura e condições a confirmar pela empresa.',
+    image: 'Imagem ilustrativa; não representa a frota da empresa.',
+    required: 'Complete os campos obrigatórios antes de continuar.'
+  },
+  en: {
+    demo: 'Independent concept by TOIMU · Not the official website. No requests are sent.',
+    nav: ['Home', 'Solutions', 'How it works', 'Contact'],
+    quote: 'Plan a shipment',
+    eyebrow: 'MIGUEL AM TRANSPORTES',
+    title: <>Your urgency.<br /><em>Our direction.</em></>,
+    intro: 'A digital concept connecting businesses, goods and destinations through a straightforward transport experience.',
+    origin: 'Origin',
+    destination: 'Destination',
+    placeholder: ['Collection city', 'Delivery city'],
+    solutions: 'Every shipment starts with a solution.',
+    services: [['Dedicated transport', 'A proposed service for goods that need a direct journey.'], ['Regional distribution', 'An enquiry experience designed for collections and deliveries across the Iberian Peninsula.'], ['Business shipments', 'A point of contact for recurring needs and tailored transport.']],
+    process: 'From collection to delivery. Made simple.',
+    steps: [['Tell us the route', 'Share the origin, destination and what needs moving.'], ['Define the details', 'Add dates, dimensions and cargo requirements.'], ['Receive a proposal', 'On an operational website, the team confirms availability and terms.']],
+    contact: 'Let’s get your idea moving.',
+    contactText: 'Explore the shipment enquiry. In this demonstration, details stay on the page and are not sent to the business.',
+    route: 'The route',
+    cargo: 'The cargo',
+    details: 'Your details',
+    next: 'Continue',
+    back: 'Back',
+    date: 'Preferred date',
+    kind: 'Cargo type',
+    weight: 'Approximate weight (kg)',
+    description: 'Description / dimensions',
+    name: 'Name',
+    email: 'Email',
+    review: 'Preview request',
+    success: 'Request prepared — demonstration',
+    successText: 'No request was sent and no shipment was booked.',
+    download: 'Download summary',
+    new: 'Prepare another request',
+    faq: 'Before you send',
+    faqs: [['Does this form book a shipment?', 'No. This is a quotation enquiry demonstration. A real service requires confirmation from the team.'], ['Why is there no automatic price?', 'Pricing depends on route, volume, weight and availability. This concept does not invent rates.'], ['Can I include special requirements?', 'Yes. Use the description to add dimensions, access or handling requirements.']],
+    footer: 'Website concept · Services, coverage and terms require business confirmation.',
+    image: 'Illustrative image; does not depict the business’s fleet.',
+    required: 'Complete the required fields before continuing.'
+  }
 };
-function Quote({t}) {
- const location=useLocation(); const initial=new URLSearchParams(location.search);
- const [step,setStep]=useState(0); const [done,setDone]=useState(false); const [data,setData]=useState({origin:initial.get('origin')||'',destination:initial.get('destination')||'',date:'',kind:'',weight:'',description:'',name:'',email:''});
- const field=(key,label,type='text',required=true)=><label>{label}<input name={key} type={type} value={data[key]} required={required} min={type==='number'?'1':type==='date'?new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10):undefined} onChange={e=>{setData({...data,[key]:e.target.value});setDone(false);}} /></label>;
- function download(){const text=Object.entries(data).map(([key,value])=>`${key}: ${value}`).join('\n'); const url=URL.createObjectURL(new Blob(['DEMO / NO SHIPMENT BOOKED\n'+text],{type:'text/plain'})); const a=document.createElement('a');a.href=url;a.download='miguel-am-demo-request.txt';a.click();URL.revokeObjectURL(url);}
- return <section className="ma-section ma-quote"><p className="ma-kicker">MIGUEL AM / {t.quote}</p><h1>{t.quote}</h1><p>{t.contactText}</p><ol className="ma-progress">{[t.route,t.cargo,t.details].map((label,i)=><li key={label} aria-current={step===i?'step':undefined}><span>{i+1}</span>{label}</li>)}</ol>
- {done?<div className="ma-result" role="status"><h2>{t.success}</h2><p>{t.successText}</p><dl>{Object.entries(data).map(([key,value])=><div key={key}><dt>{t[key]||key}</dt><dd>{value||'—'}</dd></div>)}</dl><button className="ma-button" onClick={download}>{t.download}</button><button className="ma-secondary" onClick={()=>{setDone(false);setStep(0);}}>{t.new}</button></div>:<form key={step} onSubmit={e=>{e.preventDefault();const values=Object.fromEntries(new FormData(e.currentTarget));setData(previous=>({...previous,...values}));step<2?setStep(step+1):setDone(true);}} className="ma-form">{step===0?<>{field('origin',t.origin)}{field('destination',t.destination)}{field('date',t.date,'date')}</>:step===1?<>{field('kind',t.kind)}{field('weight',t.weight,'number',false)}<label className="ma-wide">{t.description}<textarea name="description" rows="4" value={data.description} onChange={e=>setData({...data,description:e.target.value})} required /></label></>:<>{field('name',t.name)}{field('email',t.email,'email')}</>}<div className="ma-form-actions">{step>0&&<button type="button" className="ma-secondary" onClick={()=>setStep(step-1)}>{t.back}</button>}<button className="ma-button" type="submit">{step===2?t.review:t.next}</button></div></form>}
+
+function Quote({
+  t
+}) {
+  const location = useLocation();
+  const initial = new URLSearchParams(location.search);
+  const [step, setStep] = useState(0);
+  const [done, setDone] = useState(false);
+  const [data, setData] = useState({
+    origin: initial.get('origin') || '',
+    destination: initial.get('destination') || '',
+    date: '',
+    kind: '',
+    weight: '',
+    description: '',
+    name: '',
+    email: ''
+  });
+
+  const field = (key, label, type = 'text', required = true) => <label>{label}<input name={key} type={type} value={data[key]} required={required} min={type === 'number' ? '1' : type === 'date' ? new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10) : undefined} onChange={e => {
+      setData({ ...data,
+        [key]: e.target.value
+      });
+      setDone(false);
+    }} /></label>;
+
+  function download() {
+    const text = Object.entries(data).map(([key, value]) => `${t[key] || key}: ${value}`).join('\n');
+    const url = URL.createObjectURL(new Blob([t.successText + '\n' + text], {
+      type: 'text/plain'
+    }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'miguel-am-demo-request.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  return <section className="ma-section ma-quote"><p className="ma-kicker">MIGUEL AM / {t.quote}</p><h1>{t.quote}</h1><p>{t.contactText}</p><ol className="ma-progress">{[t.route, t.cargo, t.details].map((label, i) => <li key={label} aria-current={step === i ? 'step' : undefined}><span>{i + 1}</span>{label}</li>)}</ol>
+ {done ? <div className="ma-result" role="status"><h2>{t.success}</h2><p>{t.successText}</p><dl>{Object.entries(data).map(([key, value]) => <div key={key}><dt>{t[key] || key}</dt><dd>{value || '—'}</dd></div>)}</dl><button className="ma-button" onClick={download}>{t.download}</button><button className="ma-secondary" onClick={() => {
+        setDone(false);
+        setStep(0);
+      }}>{t.new}</button></div> : <form key={step} onSubmit={e => {
+      e.preventDefault();
+      const values = Object.fromEntries(new FormData(e.currentTarget));
+      setData(previous => ({ ...previous,
+        ...values
+      }));
+      step < 2 ? setStep(step + 1) : setDone(true);
+    }} className="ma-form">{step === 0 ? <>{field('origin', t.origin)}{field('destination', t.destination)}{field('date', t.date, 'date')}</> : step === 1 ? <>{field('kind', t.kind)}{field('weight', t.weight, 'number', false)}<label className="ma-wide">{t.description}<textarea name="description" rows="4" value={data.description} onChange={e => setData({ ...data,
+            description: e.target.value
+          })} required /></label></> : <>{field('name', t.name)}{field('email', t.email, 'email')}</>}<div className="ma-form-actions">{step > 0 && <button type="button" className="ma-secondary" onClick={() => setStep(step - 1)}>{t.back}</button>}<button className="ma-button" type="submit">{step === 2 ? t.review : t.next}</button></div></form>}
  </section>;
 }
-function Home({t}) { const navigate=useNavigate(); return <>
+
+function Home({
+  t
+}) {
+  const navigate = useNavigate();
+  return <>
  <section className="ma-hero" id="home"><img src={hero} alt="" fetchPriority="high" /><div className="ma-hero-shade" /><div className="ma-hero-content"><p className="ma-kicker">{t.eyebrow}</p><h1>{t.title}</h1><p className="ma-intro">{t.intro}</p><Link className="ma-button" to="/quotation">{t.quote}</Link></div><span className="ma-image-note">{t.image}</span><div className="ma-route-line" aria-hidden="true"><span /></div></section>
- <div className="ma-route-panel"><form onSubmit={e=>{e.preventDefault();const d=new FormData(e.currentTarget);navigate('/quotation?'+new URLSearchParams({origin:d.get('origin'),destination:d.get('destination')}));}}><label>{t.origin}<input name="origin" placeholder={t.placeholder[0]} required /></label><span className="ma-route-divider" aria-hidden="true">↔</span><label>{t.destination}<input name="destination" placeholder={t.placeholder[1]} required /></label><button type="submit" className="ma-button">{t.quote}</button></form></div>
- <section className="ma-section" id="services"><p className="ma-kicker">01 / {t.nav[1]}</p><h2>{t.solutions}</h2><div className="ma-services">{t.services.map(([title,description],i)=><article key={title}><span className="ma-number">0{i+1}</span><h3>{title}</h3><p>{description}</p><Link to="/quotation">{t.quote} <span aria-hidden="true">↗</span></Link></article>)}</div></section>
- <section className="ma-process" id="process"><div className="ma-section"><p className="ma-kicker">02 / {t.nav[2]}</p><h2>{t.process}</h2><div className="ma-steps">{t.steps.map(([title,description],i)=><article key={title}><span>{i+1}</span><h3>{title}</h3><p>{description}</p></article>)}</div></div></section>
- <section className="ma-section ma-faq"><div><p className="ma-kicker">03 / FAQ</p><h2>{t.faq}</h2></div><div>{t.faqs.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></section>
+ <div className="ma-route-panel"><form onSubmit={e => {
+        e.preventDefault();
+        const d = new FormData(e.currentTarget);
+        navigate('/quotation?' + new URLSearchParams({
+          origin: d.get('origin'),
+          destination: d.get('destination')
+        }));
+      }}><label>{t.origin}<input name="origin" placeholder={t.placeholder[0]} required /></label><span className="ma-route-divider" aria-hidden="true">↔</span><label>{t.destination}<input name="destination" placeholder={t.placeholder[1]} required /></label><button type="submit" className="ma-button">{t.quote}</button></form></div>
+ <section className="ma-section" id="services"><p className="ma-kicker">01 / {t.nav[1]}</p><h2>{t.solutions}</h2><div className="ma-services">{t.services.map(([title, description], i) => <article key={title}><span className="ma-number">0{i + 1}</span><h3>{title}</h3><p>{description}</p><Link to="/quotation">{t.quote} <span aria-hidden="true">↗</span></Link></article>)}</div></section>
+ <section className="ma-process" id="process"><div className="ma-section"><p className="ma-kicker">02 / {t.nav[2]}</p><h2>{t.process}</h2><div className="ma-steps">{t.steps.map(([title, description], i) => <article key={title}><span>{i + 1}</span><h3>{title}</h3><p>{description}</p></article>)}</div></div></section>
+ <section className="ma-section ma-faq"><div><p className="ma-kicker">03 / FAQ</p><h2>{t.faq}</h2></div><div>{t.faqs.map(([q, a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></section>
  <section className="ma-contact" id="contact"><p className="ma-kicker">MIGUEL AM TRANSPORTES</p><h2>{t.contact}</h2><p>{t.contactText}</p><Link className="ma-button" to="/quotation">{t.quote}</Link></section>
- </>; }
-function Site(){const [language,setLanguage]=useState('pt');const [menu,setMenu]=useState(false);const t=copy[language];const location=useLocation();useEffect(()=>{setMenu(false);if(!location.hash)window.scrollTo(0,0);document.documentElement.lang=language;},[location,language]);return <div className="ma-site"><header className="ma-header"><Link to="/" aria-label="Miguel AM"><img src={logo} alt="Miguel AM Transportes" /></Link><button className="ma-menu" aria-expanded={menu} aria-label="Menu" onClick={()=>setMenu(!menu)}>☰</button><nav className={menu?'is-open':''} aria-label="Navigation">{t.nav.map((label,i)=><a key={label} href={'/#'+['home','services','process','contact'][i]}>{label}</a>)}</nav><div className="ma-header-actions"><button onClick={()=>setLanguage(language==='pt'?'en':'pt')} aria-label="Change language">{language==='pt'?'EN':'PT'}</button><Link className="ma-header-quote" to="/quotation">{t.quote}</Link></div></header><aside className="ma-demo">{t.demo}</aside><main><Routes><Route path="/" element={<Home t={t}/>} /><Route path="/quotation" element={<Quote t={t}/>} /><Route path="/contactus" element={<section className="ma-section ma-contact-page"><p className="ma-kicker">{t.nav[3]}</p><h1>{t.contact}</h1><p>{t.contactText}</p><Link className="ma-button" to="/quotation">{t.quote}</Link></section>}/><Route path="*" element={<section className="ma-section"><h1>404</h1><Link to="/">{t.nav[0]}</Link></section>} /></Routes></main><footer className="ma-footer"><img src={logo} alt="Miguel AM Transportes"/><p>{t.footer}</p><a href="/#home">{t.nav[0]}</a><span>TOIMU Technologies OÜ · Independent concept</span></footer></div>;}
-export default function App(){return <BrowserRouter><Site/></BrowserRouter>;}
+ </>;
+}
+
+function Site() {
+  const {
+    language,
+    tr
+  } = useDemoLanguage();
+  const [menu, setMenu] = useState(false);
+
+  const localize = value => typeof value === 'string' ? tr(value) : Array.isArray(value) ? value.map(localize) : value;
+
+  const t = language === 'pt' ? copy.pt : Object.fromEntries(Object.entries(copy.en).map(([key, value]) => [key, localize(value)]));
+  t.title = language === 'pt' ? copy.pt.title : <>{tr('Your urgency.')}<br /><em>{tr('Our direction.')}</em></>;
+  const location = useLocation();
+  useEffect(() => {
+    setMenu(false);
+    if (!location.hash) window.scrollTo(0, 0);
+    document.documentElement.lang = language;
+  }, [location, language]);
+  return <div className="ma-site"><header className="ma-header"><Link to="/" aria-label="Miguel AM"><img src={logo} alt="Miguel AM Transportes" /></Link><button className="ma-menu" aria-expanded={menu} aria-label={tr("Menu")} onClick={() => setMenu(!menu)}>☰</button><nav className={menu ? 'is-open' : ''} aria-label={tr("Navigation")}>{t.nav.map((label, i) => <a key={label} href={'/#' + ['home', 'services', 'process', 'contact'][i]}>{label}</a>)}</nav><div className="ma-header-actions"><DemoLanguageSwitcher /><Link className="ma-header-quote" to="/quotation">{t.quote}</Link></div></header><aside className="ma-demo">{t.demo}</aside><main><Routes><Route path="/" element={<Home t={t} />} /><Route path="/quotation" element={<Quote t={t} />} /><Route path="/contactus" element={<section className="ma-section ma-contact-page"><p className="ma-kicker">{t.nav[3]}</p><h1>{t.contact}</h1><p>{t.contactText}</p><Link className="ma-button" to="/quotation">{t.quote}</Link></section>} /><Route path="*" element={<section className="ma-section"><h1>404</h1><Link to="/">{t.nav[0]}</Link></section>} /></Routes></main><footer className="ma-footer"><img src={logo} alt="Miguel AM Transportes" /><p>{t.footer}</p><a href="/#home">{t.nav[0]}</a><span>{tr("TOIMU Technologies OÜ · Independent concept")}</span></footer></div>;
+}
+
+function AppContent() {
+  return <BrowserRouter><Site /></BrowserRouter>;
+}
+
+export default function App(){return <DemoLanguageProvider><AppContent /></DemoLanguageProvider>;}

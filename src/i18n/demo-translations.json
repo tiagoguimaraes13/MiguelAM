@@ -1,0 +1,316 @@
+{
+  "Website language": {
+    "et": "Veebilehe keel",
+    "ru": "Язык сайта",
+    "fi": "Sivuston kieli",
+    "pt": "Idioma do site",
+    "fr": "Langue du site"
+  },
+  "Email": {
+    "et": "E-post",
+    "ru": "Эл. почта",
+    "fi": "Sähköposti"
+  },
+  "Independent concept by TOIMU · Not the official website. No requests are sent.": {
+    "et": "TOIMU sõltumatu kontseptsioon · Pole ametlik veebileht. Päringuid ei saadeta.",
+    "ru": "Независимая концепция от TOIMU · Не официальный сайт. Заявки не отправляются.",
+    "fi": "TOIMUn itsenäinen konsepti · Ei virallinen sivusto. Kyselyitä ei lähetetä."
+  },
+  "Home": {
+    "et": "Avaleht",
+    "ru": "Главная",
+    "fi": "Etusivu"
+  },
+  "Solutions": {
+    "et": "Lahendused",
+    "ru": "Решения",
+    "fi": "Ratkaisut"
+  },
+  "How it works": {
+    "et": "Kuidas see töötab",
+    "ru": "Как это работает",
+    "fi": "Näin se toimii"
+  },
+  "Contact": {
+    "et": "Kontakt",
+    "ru": "Контакты",
+    "fi": "Yhteystiedot"
+  },
+  "Plan a shipment": {
+    "et": "Planeeri saadetis",
+    "ru": "Спланировать перевозку",
+    "fi": "Suunnittele kuljetus"
+  },
+  "A digital concept connecting businesses, goods and destinations through a straightforward transport experience.": {
+    "et": "Digitaalne kontseptsioon ühendab ettevõtted, kaubad ja sihtkohad lihtsa transpordikogemusega.",
+    "ru": "Цифровая концепция связывает компании, грузы и пункты назначения через понятный транспортный сервис.",
+    "fi": "Digitaalinen konsepti yhdistää yritykset, tavarat ja määränpäät selkeään kuljetuskokemukseen."
+  },
+  "Origin": {
+    "et": "Lähtekoht",
+    "ru": "Откуда",
+    "fi": "Lähtöpaikka"
+  },
+  "Destination": {
+    "et": "Sihtkoht",
+    "ru": "Куда",
+    "fi": "Määränpää"
+  },
+  "Collection city": {
+    "et": "Pealekorje linn",
+    "ru": "Город забора",
+    "fi": "Noutokaupunki"
+  },
+  "Delivery city": {
+    "et": "Tarne linn",
+    "ru": "Город доставки",
+    "fi": "Toimituskaupunki"
+  },
+  "Every shipment starts with a solution.": {
+    "et": "Iga saadetis algab lahendusest.",
+    "ru": "Каждая перевозка начинается с решения.",
+    "fi": "Jokainen kuljetus alkaa ratkaisusta."
+  },
+  "Dedicated transport": {
+    "et": "Otsetransport",
+    "ru": "Выделенный транспорт",
+    "fi": "Suora kuljetus"
+  },
+  "A proposed service for goods that need a direct journey.": {
+    "et": "Teenuse ettepanek kaupadele, mis vajavad otsest teekonda.",
+    "ru": "Предлагаемый сервис для грузов, которым нужен прямой маршрут.",
+    "fi": "Palveluehdotus tavaroille, jotka tarvitsevat suoran reitin."
+  },
+  "Regional distribution": {
+    "et": "Piirkondlik jaotus",
+    "ru": "Региональная доставка",
+    "fi": "Alueellinen jakelu"
+  },
+  "An enquiry experience designed for collections and deliveries across the Iberian Peninsula.": {
+    "et": "Päringukogemus kauba pealekorjeks ja tarnimiseks Pürenee poolsaarel.",
+    "ru": "Заявки на забор и доставку грузов по Пиренейскому полуострову.",
+    "fi": "Kyselykokemus noutoihin ja toimituksiin Iberian niemimaalla."
+  },
+  "Business shipments": {
+    "et": "Ettevõtete saadetised",
+    "ru": "Корпоративные перевозки",
+    "fi": "Yrityskuljetukset"
+  },
+  "A point of contact for recurring needs and tailored transport.": {
+    "et": "Kontakt korduvate vajaduste ja kohandatud transpordi jaoks.",
+    "ru": "Контакт для регулярных потребностей и индивидуальных перевозок.",
+    "fi": "Yhteyspiste toistuviin tarpeisiin ja räätälöityihin kuljetuksiin."
+  },
+  "From collection to delivery. Made simple.": {
+    "et": "Pealekorjest tarneni. Lihtsalt.",
+    "ru": "От забора до доставки. Просто.",
+    "fi": "Noudosta toimitukseen. Selkeästi."
+  },
+  "Tell us the route": {
+    "et": "Räägi teekonnast",
+    "ru": "Расскажите о маршруте",
+    "fi": "Kerro reitti"
+  },
+  "Share the origin, destination and what needs moving.": {
+    "et": "Jaga lähtekohta, sihtkohta ja transporditavat kaupa.",
+    "ru": "Укажите отправление, назначение и груз.",
+    "fi": "Kerro lähtöpaikka, määränpää ja kuljetettava tavara."
+  },
+  "Define the details": {
+    "et": "Täpsusta detailid",
+    "ru": "Уточните детали",
+    "fi": "Määritä tiedot"
+  },
+  "Add dates, dimensions and cargo requirements.": {
+    "et": "Lisa kuupäevad, mõõtmed ja lasti nõuded.",
+    "ru": "Добавьте даты, размеры и требования к грузу.",
+    "fi": "Lisää päivät, mitat ja kuorman vaatimukset."
+  },
+  "Receive a proposal": {
+    "et": "Saa ettepanek",
+    "ru": "Получите предложение",
+    "fi": "Saa ehdotus"
+  },
+  "On an operational website, the team confirms availability and terms.": {
+    "et": "Toimival veebilehel kinnitab meeskond saadavuse ja tingimused.",
+    "ru": "На рабочем сайте команда подтверждает доступность и условия.",
+    "fi": "Toimivalla sivustolla tiimi vahvistaa saatavuuden ja ehdot."
+  },
+  "Let’s get your idea moving.": {
+    "et": "Paneme sinu idee liikuma.",
+    "ru": "Дадим вашей идее движение.",
+    "fi": "Laitetaan ideasi liikkeelle."
+  },
+  "Explore the shipment enquiry. In this demonstration, details stay on the page and are not sent to the business.": {
+    "et": "Proovi saadetise päringut. Selles demos jäävad andmed ainult lehele ega jõua ettevõtteni.",
+    "ru": "Попробуйте заявку на перевозку. В демо данные остаются на странице и не отправляются компании.",
+    "fi": "Kokeile kuljetuskyselyä. Demossa tiedot pysyvät sivulla eikä niitä lähetetä yritykselle."
+  },
+  "The route": {
+    "et": "Teekond",
+    "ru": "Маршрут",
+    "fi": "Reitti"
+  },
+  "The cargo": {
+    "et": "Kaup",
+    "ru": "Груз",
+    "fi": "Kuorma"
+  },
+  "Your details": {
+    "et": "Sinu andmed",
+    "ru": "Ваши данные",
+    "fi": "Tietosi"
+  },
+  "Continue": {
+    "et": "Jätka",
+    "ru": "Продолжить",
+    "fi": "Jatka"
+  },
+  "Back": {
+    "et": "Tagasi",
+    "ru": "Назад",
+    "fi": "Takaisin"
+  },
+  "Preferred date": {
+    "et": "Soovitud kuupäev",
+    "ru": "Предпочтительная дата",
+    "fi": "Toivottu päivä"
+  },
+  "Cargo type": {
+    "et": "Kauba tüüp",
+    "ru": "Тип груза",
+    "fi": "Kuorman tyyppi"
+  },
+  "Approximate weight (kg)": {
+    "et": "Ligikaudne kaal (kg)",
+    "ru": "Примерный вес (кг)",
+    "fi": "Arvioitu paino (kg)"
+  },
+  "Description / dimensions": {
+    "et": "Kirjeldus / mõõtmed",
+    "ru": "Описание / размеры",
+    "fi": "Kuvaus / mitat"
+  },
+  "Name": {
+    "et": "Nimi",
+    "ru": "Имя",
+    "fi": "Nimi"
+  },
+  "Preview request": {
+    "et": "Vaata päringut",
+    "ru": "Предпросмотр заявки",
+    "fi": "Esikatsele kyselyä"
+  },
+  "Request prepared — demonstration": {
+    "et": "Päring valmis — demo",
+    "ru": "Заявка подготовлена — демо",
+    "fi": "Kysely valmis — demo"
+  },
+  "No request was sent and no shipment was booked.": {
+    "et": "Päringut ei saadetud ega saadetist broneeritud.",
+    "ru": "Заявка не отправлена, перевозка не забронирована.",
+    "fi": "Kyselyä ei lähetetty eikä kuljetusta varattu."
+  },
+  "Download summary": {
+    "et": "Laadi kokkuvõte alla",
+    "ru": "Скачать сводку",
+    "fi": "Lataa yhteenveto"
+  },
+  "Prepare another request": {
+    "et": "Koosta uus päring",
+    "ru": "Подготовить новую заявку",
+    "fi": "Valmistele toinen kysely"
+  },
+  "Before you send": {
+    "et": "Enne saatmist",
+    "ru": "Перед отправкой",
+    "fi": "Ennen lähettämistä"
+  },
+  "Does this form book a shipment?": {
+    "et": "Kas see vorm broneerib transpordi?",
+    "ru": "Эта форма бронирует перевозку?",
+    "fi": "Varaako tämä lomake kuljetuksen?"
+  },
+  "No. This is a quotation enquiry demonstration. A real service requires confirmation from the team.": {
+    "et": "Ei. See on hinnapäringu demo. Päris teenus nõuab meeskonna kinnitust.",
+    "ru": "Нет. Это демонстрация запроса цены. Реальная услуга требует подтверждения команды.",
+    "fi": "Ei. Tämä on tarjouskyselyn demo. Oikea palvelu edellyttää tiimin vahvistusta."
+  },
+  "Why is there no automatic price?": {
+    "et": "Miks pole automaatset hinda?",
+    "ru": "Почему нет автоматической цены?",
+    "fi": "Miksi hintaa ei lasketa automaattisesti?"
+  },
+  "Pricing depends on route, volume, weight and availability. This concept does not invent rates.": {
+    "et": "Hind sõltub teekonnast, mahust, kaalust ja saadavusest. See kontseptsioon ei leiuta hindu.",
+    "ru": "Цена зависит от маршрута, объёма, веса и доступности. Концепция не придумывает тарифы.",
+    "fi": "Hinta riippuu reitistä, tilavuudesta, painosta ja saatavuudesta. Konsepti ei keksi hintoja."
+  },
+  "Can I include special requirements?": {
+    "et": "Kas saan lisada erinõudeid?",
+    "ru": "Можно добавить особые требования?",
+    "fi": "Voinko lisätä erityisvaatimuksia?"
+  },
+  "Yes. Use the description to add dimensions, access or handling requirements.": {
+    "et": "Jah. Lisa kirjeldusse mõõtmed, ligipääs ja käsitsemise nõuded.",
+    "ru": "Да. Укажите в описании размеры, доступ и требования к обращению.",
+    "fi": "Kyllä. Lisää kuvaukseen mitat, pääsy ja käsittelyvaatimukset."
+  },
+  "Website concept · Services, coverage and terms require business confirmation.": {
+    "et": "Veebilehe kontseptsioon · Teenused, katvus ja tingimused vajavad ettevõtte kinnitust.",
+    "ru": "Концепция сайта · Услуги, покрытие и условия требуют подтверждения компании.",
+    "fi": "Sivustokonsepti · Palvelut, kattavuus ja ehdot edellyttävät yrityksen vahvistusta."
+  },
+  "Illustrative image; does not depict the business’s fleet.": {
+    "et": "Illustratiivne pilt; ei kujuta ettevõtte autoparki.",
+    "ru": "Изображение иллюстративно; это не автопарк компании.",
+    "fi": "Kuva on esimerkki eikä esitä yrityksen kalustoa."
+  },
+  "Complete the required fields before continuing.": {
+    "et": "Enne jätkamist täida kohustuslikud väljad.",
+    "ru": "Заполните обязательные поля для продолжения.",
+    "fi": "Täytä pakolliset kentät jatkaaksesi."
+  },
+  "Your urgency.": {
+    "et": "Sinu kiire vajadus.",
+    "ru": "Ваша срочность.",
+    "fi": "Sinun kiireesi."
+  },
+  "Our direction.": {
+    "et": "Meie suund.",
+    "ru": "Наш маршрут.",
+    "fi": "Meidän suuntamme."
+  },
+  "Menu": {
+    "et": "Menüü",
+    "ru": "Меню",
+    "fi": "Valikko",
+    "pt": "Menu"
+  },
+  "Navigation": {
+    "et": "Navigeerimine",
+    "ru": "Навигация",
+    "fi": "Navigointi",
+    "pt": "Navegação"
+  },
+  "TOIMU Technologies OÜ · Independent concept": {
+    "et": "TOIMU Technologies OÜ · Sõltumatu kontseptsioon",
+    "ru": "TOIMU Technologies OÜ · Независимая концепция",
+    "fi": "TOIMU Technologies OÜ · Itsenäinen konsepti",
+    "pt": "TOIMU Technologies OÜ · Conceito independente"
+  },
+  "Website concept": {
+    "pt": "Conceito de website",
+    "fr": "Concept de site",
+    "et": "Veebilehe kontseptsioon",
+    "ru": "Концепция сайта",
+    "fi": "Sivustokonsepti"
+  },
+  "Only your language preference is saved in this browser. Demo form details and carts are not saved.": {
+    "pt": "Apenas o idioma é guardado neste navegador. Os dados dos formulários e carrinhos de demonstração não são guardados.",
+    "fr": "Seule la langue est enregistrée dans ce navigateur. Les données des formulaires et paniers de démonstration ne sont pas enregistrées.",
+    "et": "Brauserisse salvestatakse ainult keelevalik. Näidisvormide andmeid ja ostukorve ei salvestata.",
+    "ru": "В браузере сохраняется только выбор языка. Данные демо-форм и корзин не сохраняются.",
+    "fi": "Selaimeen tallennetaan vain kielivalinta. Demolomakkeiden tietoja ja ostoskoreja ei tallenneta."
+  }
+}
